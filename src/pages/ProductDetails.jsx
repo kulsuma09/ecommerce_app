@@ -75,6 +75,7 @@ const ProductDetail = () => {
         </div>
         <Tab/>
     </section>
+    <Footer/>
     </>
 
   );
