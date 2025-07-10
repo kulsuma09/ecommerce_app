@@ -123,13 +123,15 @@
 
 
 import { useCart } from '../context/CartContext';
+import Footer from '../components/Footer';
 
 const Cart = () => {
   const { cart, removeFromCart, updateQuantity } = useCart();
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   return (
-    <div style={{ maxWidth: '800px', margin: '20px auto', padding: '1rem' }}>
+    <>
+    <div style={{ maxWidth: '800px', margin: '20px auto', padding: '1rem',height:'100vh' }}>
       <h1 style={{ textAlign: 'center', marginBottom: '1.5rem' }}>Your Cart</h1>
 
       {cart.length === 0 ? (
@@ -187,6 +189,9 @@ const Cart = () => {
         Total: Tk {total.toFixed(2)}
       </h2>
     </div>
+    <Footer/>
+    </>
+
   );
 };
 

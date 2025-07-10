@@ -3,6 +3,7 @@ import { useCart } from '../context/CartContext';
 import Products from '../data/Product';
 import Breadcrumbs from '../components/Breadcrumbs';
 import Tab from '../components/Tab'
+import Footer from '../components/Footer';
 const ProductDetail = () => {
   const { title } = useParams();
   console.log(title);
