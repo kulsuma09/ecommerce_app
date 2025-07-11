@@ -11,13 +11,13 @@ const App = () => (
   <CartProvider>
     <Router>
       <Navbar />
-      <Routes>
+      <HashRouter>
         <Route path="/" element={<Home />} />
         <Route path="/product/:title" element={<ProductDetail />} />
         <Route path="/about" element={<About />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="*" element={<NotFound />} />
-      </Routes>
+      </HashRouter>
     </Router>
   </CartProvider>
 );
